@@ -1,16 +1,5 @@
 #+title: Proxmox, TrueNAS, VM and Container Setup
 
-* Hardware
-- ECC Memory
-- Processor and board that supports it: AMD/Xeon
-- Motherboard that allows passthrough of iommu groups
-- Enough core
-
-* Bios
-- Enable SVM (amd) or VT-d (intel) 
-- Sata mode to AHCI not RAID
-- Enable XMP if supported
-
 * Proxmox
 ** Installation
 - Select installation drive ((nvme-)ssd)
@@ -193,10 +182,11 @@
 
 * Personal setup
 ** Network
-- 192.168.0.1 = gateway
-- 192.168.0.2 = proxmox
-- 192.168.0.3 = truenas
-- 192.168.0.4 = network: portainer, pihole, wireguard
+- 192.168.51.1 = server idrac
+- 192.168.51.2 = proxmox
+- 192.168.51.3 = truenas
+- 192.168.51.4 = network: portainer, pihole, wireguard
+- 
 - 192.168.0.5 = proxy: traefik
 - 192.168.0.6 = website: nginx
 - 192.168.0.7-9 = reserved priority vm/container
