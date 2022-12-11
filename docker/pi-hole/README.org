@@ -53,6 +53,9 @@ services:
 *** Variables
 
 - Volumes: Multiple volumes need to be passed trough or keep locally. Left volume is a local directory or file. Right volume is a direcotry or file inside the container.
+- Directories were created on the container as follows
+- /var/lib/docker/volumes/pihole_data/etc
+- /var/lib/docker/volumes/pihole_data/dns
 - Environment:
   - Timezone
   - Password for the web dashboard
