@@ -3,6 +3,29 @@
 
 A black hole for Internet Advertisements.
 
+** Notes for deployment
+*** systemd needs to be disabled as its listening on port 54 and will conflict
+#+begin_src yaml
+systemctl disable systemd-resolved.service
+systemctl stop systemd-resolved
+#+end_src
+
+*** After disabling systemd /etc/resolv.conf nameserver entry must be commented and replaced by
+#+begin_src yaml
+nameserver 8.8.8.8
+#+end_src
+
+*** After successfully deploying the stack change back nameserver on /etc/resolv.conf to resolve onthe local router
+#+begin_src yaml
+nameserver 192.168.50.1
+#+end_src
+
+*** Some variables set during the installation
+- Directories were created on the container as follows
+- /var/lib/docker/volumes/pihole_data/etc
+- /var/lib/docker/volumes/pihole_data/dns
+
+
 ** Docker-compose.yml
 *** Docker Image
 
