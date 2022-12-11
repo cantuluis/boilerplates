@@ -25,6 +25,9 @@ nameserver 192.168.50.1
 - /var/lib/docker/volumes/pihole_data/etc
 - /var/lib/docker/volumes/pihole_data/dns
 
+*** Additional lists for ad blocking/mal. sites/tracking that i added after the install
+https://firebog.net/
+
 
 ** Docker-compose.yml
 *** Docker Image
